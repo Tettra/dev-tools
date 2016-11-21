@@ -1,0 +1,5 @@
+echo "Opening Github Issue"
+issue=$(git rev-parse --abbrev-ref HEAD | cut -d'-' -f1,1 )
+open "https://github.com/Tettra/tettra-wiki/issues/${issue}"
+
+

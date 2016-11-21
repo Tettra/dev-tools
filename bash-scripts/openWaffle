@@ -1,0 +1,9 @@
+# https://github.com/oscarmorrison/GetFreeStuff.git
+# https://waffle.io/oscarmorrison/GetFreeStuff
+
+url=$(git config --get remote.origin.url)
+url=$( tr '[A-Z]' '[a-z]' <<< $url)
+url=${url%.git}
+url="${url/github.com/waffle.io}"
+echo "opening Waffle.io: ${url}"
+open $url
